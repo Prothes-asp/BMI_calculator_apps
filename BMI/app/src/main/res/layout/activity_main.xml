@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:paddingVertical="40dp"
+    android:background="@color/black"
+    >
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textSize="30sp"
+        android:textColor="#00BCD4"
+        android:layout_marginBottom="20dp"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Given Your Weight (Kg)"
+        android:textStyle="bold"
+        android:textSize="17sp"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="20dp"
+        android:textColor="#ff9800"
+        />
+
+    <EditText
+        android:id="@+id/edweight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:hint="Type Your Weight (Kg)"
+        android:layout_marginHorizontal="20dp"
+        android:paddingHorizontal="10dp"
+        android:ems="10"
+        android:background="@drawable/ripple_effect"
+        android:layout_marginTop="10dp"
+        android:inputType="numberDecimal"
+        android:textColor="@color/white"
+        android:textColorHint="#54FFFFFF"
+        android:maxLength="3"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Given Your Height"
+        android:textStyle="bold"
+        android:textSize="17sp"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="20dp"
+        android:layout_marginBottom="10dp"
+        android:textColor="#ff9800"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingHorizontal="20dp"
+        android:weightSum="2"
+        >
+
+        <EditText
+            android:id="@+id/edheightFt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:hint="Height (Feet)"
+            android:layout_weight="1"
+            android:paddingHorizontal="10dp"
+            android:background="@drawable/ripple_effect"
+            android:layout_marginRight="10dp"
+            android:inputType="number"
+            android:textColor="@color/white"
+            android:textColorHint="#54FFFFFF"
+            android:maxLength="2"
+            />
+        <EditText
+            android:id="@+id/edheightIn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:hint="Height (Inchi)"
+            android:layout_weight="1"
+            android:background="@drawable/ripple_effect"
+            android:paddingHorizontal="10dp"
+            android:layout_marginLeft="10dp"
+            android:inputType="number"
+            android:textColor="@color/white"
+            android:textColorHint="#54FFFFFF"
+            android:maxLength="2"
+            />
+
+    </LinearLayout>
+
+
+    <Button
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn"
+        android:text="Calculate BMI"
+        android:textSize="20sp"
+        android:layout_marginTop="40dp"
+        android:layout_gravity="center"
+        android:background="@drawable/btn_ripple_effect"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:clickable="true"
+        android:focusable="true"
+        />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:background="@drawable/bg_strocke"
+        android:layout_marginTop="30dp"
+        android:layout_marginHorizontal="20dp"
+        >
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animationView"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:lottie_rawRes="@raw/bmi"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            android:layout_weight="1"
+            android:scaleType="centerCrop"
+            />
+
+        <TextView
+            android:id="@+id/tvDisplay"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:text="@string/calculate_your_bmi"
+            android:textColor="@color/white"
+            />
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/resetbtn"
+        android:text="Reset"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:background="@drawable/btn_ripple_effect2"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:clickable="true"
+        android:focusable="true"
+        />
+
+
+    <TextView
+        android:id="@+id/tvdev"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:textSize="20sp"
+        android:text="@string/developer"
+        android:textColor="@color/_36ffffff"
+        android:layout_marginTop="20dp"
+        android:paddingRight="20dp"
+        android:typeface="serif"
+        />
+
+
+</LinearLayout>

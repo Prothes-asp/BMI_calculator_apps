@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">BMI Calculator</string>
+    <string name="calculate_your_bmi">Calculate Your BMI</string>
+    <string name="developer">Developed By Prothes</string>
+</resources>
